@@ -20,8 +20,11 @@ export function newGame(game: Game, parts: string[]): string {
     if (mines < 1) {
         throw new Error("You need at least one mine to play the game!");
     }
-    if (mines > width * height - 1) {
-        throw new Error("You cannot place more mines than total fields less one.");
+    if (mines > width * height - 2) {
+        throw new Error("You cannot place more mines than total fields less two.");
+    }
+    if (width < 2 || height < 2) {
+        throw new Error("Minimum field is 2x2 for a chance to actually play.");
     }
 
     game.reset(width, height, mines);

@@ -1,6 +1,6 @@
 import * as readline from 'readline';
 import { Command, printGame } from './command';
-import { Game } from './game';
+import { Game, GameStatus } from './game';
 
 export class ReadlineRepl {
     rl: readline.Interface;
@@ -41,7 +41,9 @@ export class ReadlineRepl {
                 console.log(this.commands.get(command)!(this.game, parts));
             } catch (e) {
                 console.log(e.message);
-                console.log(printGame(this.game, false));
+                if (this.game.status !== GameStatus.READY) {
+                    console.log(printGame(this.game, false));
+                }
             }
         }
     }

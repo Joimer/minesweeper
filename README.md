@@ -11,7 +11,7 @@ The player may flag fields that they consider have bombs, in order to keep track
 ## Building and running
 
 You are going to need npm installed on the system to get dependencies and run the program.
-While being on the root folder, run `npm install`. After that, you can play by just running `npm run`.
+While being on the root folder, run `npm install`. After that, you can play by just running `npm start`.
 
 ## Considerations during development
 
