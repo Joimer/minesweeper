@@ -1,0 +1,25 @@
+{
+  "name": "minesweeper-ts",
+  "version": "1.0.0",
+  "description": "A minesweeper implementation in TypeScript.",
+  "main": "build/index.js",
+  "scripts": {
+    "start": "npm run build && node build/index.js",
+    "test": "mocha -r ts-node/register test/**/*.spec.ts",
+    "build": "rimraf ./build && rimraf tsconfig.tsbuildinfo && tsc"
+  },
+  "author": "Juanma Serrano",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chai": "^4.2.11",
+    "@types/mocha": "^7.0.2",
+    "@types/node": "^14.14.41",
+    "chai": "^4.2.0",
+    "mocha": "^7.1.2",
+    "nodemon": "^2.0.3",
+    "rimraf": "^3.0.2",
+    "ts-node": "^8.9.1",
+    "tslib": "^2.2.0",
+    "typescript": "^3.8.3"
+  }
+}
